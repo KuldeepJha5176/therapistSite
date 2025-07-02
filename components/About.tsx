@@ -6,6 +6,7 @@ import Image from "next/image";
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -130,34 +131,29 @@ const About = () => {
             style={{ transitionDelay: "0.2s" }}
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-500">
-              {/* Placeholder for doctor&#39;s image */}
               <div className="aspect-[3/4] bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center">
-                <Image
-                  width={400}
-                  height={400}
-                  src="/doctor.png"
-                  alt="Dr. Serena Blake - Clinical Psychologist"
-                  className="w-full h-full object-cover object-center"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                    e.currentTarget.nextElementSibling.style.display = "flex";
-                  }}
-                />
-                {/* Fallback content */}
-                <div
-                  className="absolute inset-0 flex flex-col items-center justify-center text-stone-500 bg-gradient-to-br from-stone-100 to-stone-200"
-                  style={{ display: "none" }}
-                >
-                  <div className="w-24 h-24 bg-stone-300 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-serif text-stone-600">
-                      JH
-                    </span>
+                {!imageError ? (
+                  <Image
+                    width={400}
+                    height={400}
+                    src="/doctor.png"
+                    alt="Dr. Serena Blake - Clinical Psychologist"
+                    className="w-full h-full object-cover object-center"
+                    onError={() => setImageError(true)}
+                  />
+                ) : (
+                  <div className="flex items-center justify-center w-full h-full">
+                    <div className="text-stone-400 text-center">
+                      <div className="w-24 h-24 mx-auto mb-4 bg-stone-300 rounded-full flex items-center justify-center">
+                        <span className="text-2xl font-serif text-stone-600">
+                          SB
+                        </span>
+                      </div>
+                      <p>Dr. Serena Blake</p>
+                      <p className="text-xs mt-1">Clinical Psychologist</p>
+                    </div>
                   </div>
-                  <p className="text-center text-sm px-4">Dr. Serena Blake</p>
-                  <p className="text-center text-xs px-4 mt-1">
-                    Clinical Psychologist
-                  </p>
-                </div>
+                )}
               </div>
 
               {/* Overlay with subtle gradient */}

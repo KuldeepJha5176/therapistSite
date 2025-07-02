@@ -34,12 +34,12 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const validateEmail = (email) => {
+  const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
 
-  const validatePhone = (phone) => {
+  const validatePhone = (phone: string) => {
     const re = /^[\+]?[\d\s\-\(\)]{10,}$/;
     return re.test(phone.replace(/\s/g, ""));
   };
