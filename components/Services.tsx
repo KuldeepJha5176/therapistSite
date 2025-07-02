@@ -190,8 +190,8 @@ const Services = () => {
           style={{ transitionDelay: "0.8s" }}
         >
           <p className="text-stone-600 mb-6 max-w-2xl mx-auto">
-            Ready to begin your journey toward healing and growth? I'm here to
-            support you every step of the way.
+            Ready to begin your journey toward healing and growth? I&#39;m here
+            to support you every step of the way.
           </p>
           <button
             onClick={() => scrollToSection("contact")}

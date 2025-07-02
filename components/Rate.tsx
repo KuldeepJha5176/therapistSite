@@ -28,7 +28,7 @@ export default function RatesComponent() {
 
           <div>
             <p>
-              For out-of-network plans, I've partnered with Mentaya using{" "}
+              For out-of-network plans, I&#39;ve partnered with Mentaya using{" "}
               <a
                 href="#"
                 className="text-slate-800 underline hover:text-slate-600 transition-colors"

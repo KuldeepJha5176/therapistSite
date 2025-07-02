@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
+import Image from "next/image";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,8 +58,8 @@ const About = () => {
                 style={{ transitionDelay: "0.3s" }}
               >
                 Finding time and opportunities to care for ourselves can be
-                incredibly challenging in today's busy and demanding world. I
-                believe therapy offers a dedicated space for self-care,
+                incredibly challenging in today&#39;s busy and demanding world.
+                I believe therapy offers a dedicated space for self-care,
                 providing the support and tools needed to improve this essential
                 practice. Therapy can help individuals identify and clarify
                 their goals, values, and the various elements that contribute to
@@ -76,7 +77,7 @@ const About = () => {
                 I am dedicated to supporting this journey by offering active
                 listening, psychological knowledge, empathy, compassion, and
                 insights into behavioral patterns and tendencies. I hold a
-                master's degree in Clinical Psychology and am committed to
+                master&#39;s degree in Clinical Psychology and am committed to
                 providing a safe and supportive environment for healing and
                 growth.
               </p>
@@ -92,7 +93,7 @@ const About = () => {
                 by influences from positive psychology, acceptance and
                 commitment concepts, and mindfulness practices. Whatever brings
                 you to therapy—anxiety, depression, relationship stress, trauma,
-                grief, or life transitions—you don't have to face it alone.
+                grief, or life transitions—you don&#39;t have to face it alone.
               </p>
             </div>
 
@@ -129,9 +130,11 @@ const About = () => {
             style={{ transitionDelay: "0.2s" }}
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-500">
-              {/* Placeholder for doctor's image */}
+              {/* Placeholder for doctor&#39;s image */}
               <div className="aspect-[3/4] bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center">
-                <img
+                <Image
+                  width={400}
+                  height={400}
                   src="/doctor.png"
                   alt="Dr. Serena Blake - Clinical Psychologist"
                   className="w-full h-full object-cover object-center"
@@ -166,7 +169,7 @@ const About = () => {
                   Dr. Serena Blake
                 </h3>
                 <p className="text-sm text-stone-600 mb-3">
-                  Master's in Clinical Psychology
+                  Master&#39;s in Clinical Psychology
                 </p>
 
                 <div className="space-y-2">

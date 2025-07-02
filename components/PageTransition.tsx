@@ -6,10 +6,12 @@ interface PageTransitionProps {
 }
 
 const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
+  const [hasMounted, setHasMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
       setFadeIn(true);
@@ -17,6 +19,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
 
     return () => clearTimeout(timer);
   }, []);
+  if (!hasMounted) return null;
 
   if (isLoading) {
     return (

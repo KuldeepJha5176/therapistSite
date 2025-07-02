@@ -135,7 +135,7 @@ const Contact = () => {
               Thank You!
             </h2>
             <p className="text-stone-600 mb-8">
-              Your message has been received. I'll get back to you within 24
+              Your message has been received. I&#39;ll get back to you within 24
               hours.
             </p>
             <button
@@ -178,9 +178,9 @@ const Contact = () => {
             }`}
             style={{ transitionDelay: "0.5s" }}
           >
-            Ready to take the first step? I'd love to hear from you. Fill out
-            the form below and I'll get back to you within 24 hours to discuss
-            how we can work together.
+            Ready to take the first step? I&#39;d love to hear from you. Fill
+            out the form below and I&#39;ll get back to you within 24 hours to
+            discuss how we can work together.
           </p>
         </div>
 
@@ -196,7 +196,7 @@ const Contact = () => {
           >
             <div className="bg-stone-50 rounded-2xl p-8">
               <h3 className="text-2xl font-serif text-stone-800 mb-6">
-                Let's Connect
+                Let&#39;s Connect
               </h3>
 
               <div className="space-y-6">
@@ -259,7 +259,7 @@ const Contact = () => {
               <ul className="space-y-3 text-stone-600">
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-amber-700 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>I'll respond within 24 hours</span>
+                  <span>I&#39;ll respond within 24 hours</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-amber-700 rounded-full mt-2 flex-shrink-0"></div>
@@ -389,7 +389,7 @@ const Contact = () => {
                       ? "border-red-500 bg-red-50"
                       : "border-stone-300 hover:border-stone-400"
                   }`}
-                  placeholder="Please share what you'd like to work on or any questions you have..."
+                  placeholder="Please share what you&#39;d like to work on or any questions you have..."
                 />
                 {errors.message && (
                   <p className="mt-1 text-sm text-red-600 flex items-center">

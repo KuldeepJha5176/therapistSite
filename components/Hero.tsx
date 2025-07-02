@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const img = new Image();
@@ -21,7 +20,6 @@ const Hero = () => {
         behavior: "smooth",
       });
     }
-    setIsMenuOpen(false);
   };
 
   return (
