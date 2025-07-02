@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const img = new Image();
@@ -10,6 +11,18 @@ const Hero = () => {
     img.src =
       "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80";
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <section className="relative h-[100vh] bg-amber-50 flex items-center justify-center overflow-hidden rounded-lg mx-4 md:mx-8 lg:mx-12 my-8">
@@ -49,6 +62,7 @@ const Hero = () => {
         </p>
 
         <Button
+          onClick={() => scrollToSection("contact")}
           size="lg"
           className="bg-teal-600/80 hover:bg-teal-700/90 text-white px-8 py-4 text-lg rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
         >

@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
-import doctor from "@/public/doctor.png";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +24,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 bg-white" ref={sectionRef}>
+    <section id="about" className="py-20 bg-stone-100" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div
@@ -37,7 +36,7 @@ const About = () => {
           >
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-serif text-stone-800">
-                About Dr. Jennifer Hahm
+                About Dr. Serena Blake
               </h2>
               <div
                 className="h-1 w-20 bg-amber-700 transition-all duration-1000 transform origin-left scale-x-0"
@@ -134,7 +133,7 @@ const About = () => {
               <div className="aspect-[3/4] bg-gradient-to-br from-stone-100 to-stone-200 flex items-center justify-center">
                 <img
                   src="/doctor.png"
-                  alt="Dr. Jennifer Hahm - Clinical Psychologist"
+                  alt="Dr. Serena Blake - Clinical Psychologist"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
@@ -151,7 +150,7 @@ const About = () => {
                       JH
                     </span>
                   </div>
-                  <p className="text-center text-sm px-4">Dr. Jennifer Hahm</p>
+                  <p className="text-center text-sm px-4">Dr. Serena Blake</p>
                   <p className="text-center text-xs px-4 mt-1">
                     Clinical Psychologist
                   </p>
@@ -164,7 +163,7 @@ const About = () => {
               {/* Floating info card */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg transform transition-all duration-500 hover:scale-105">
                 <h3 className="font-serif font-semibold text-stone-800 mb-2">
-                  Dr. Jennifer Hahm
+                  Dr. Serena Blake
                 </h3>
                 <p className="text-sm text-stone-600 mb-3">
                   Master's in Clinical Psychology
