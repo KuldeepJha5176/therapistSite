@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-[100vh] bg-amber-50 flex items-center justify-center overflow-hidden rounded-lg mx-4 md:mx-8 lg:mx-12 my-8">
+    <section id="hero" className="relative h-[100vh] bg-amber-50 flex items-center justify-center overflow-hidden rounded-lg mx-4 md:mx-8 lg:mx-12 my-8">
       {/* Background with fallback color */}
       <div className="absolute inset-0 bg-amber-50 rounded-lg">
         {/* Animated Background Image */}
