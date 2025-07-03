@@ -10,6 +10,10 @@ type ContactFormData = {
   agreeToContact: boolean;
 };
 
+type ContactFormErrors = {
+  [key: string]: string | undefined;
+};
+
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -21,7 +25,7 @@ const Contact = () => {
     preferredTime: "",
     agreeToContact: false,
   });
-  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
+  const [errors, setErrors] = useState<Partial<ContactFormErrors>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -53,7 +57,7 @@ const Contact = () => {
   };
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors: Partial<ContactFormErrors> = {};
 
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
@@ -87,7 +91,7 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -103,7 +107,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -389,9 +393,9 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  rows="4"
+                  rows={4}
                   value={formData.message}
-                  onChange={handleInputChange}
+                  onChange={handleInputChange as any}
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 resize-none ${
                     errors.message
                       ? "border-red-500 bg-red-50"
@@ -471,7 +475,7 @@ const Contact = () => {
               {/* Submit Button */}
               <div className="pt-4">
                 <button
-                  onClick={handleSubmit}
+                  onClick={handleSubmit as any}
                   disabled={isSubmitting}
                   className={`w-full flex items-center justify-center px-8 py-4 bg-amber-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${
                     isSubmitting

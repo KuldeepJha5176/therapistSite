@@ -114,8 +114,11 @@ const Services = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       onError={(e) => {
                         e.currentTarget.style.display = "none";
-                        e.currentTarget.nextElementSibling.style.display =
-                          "flex";
+                        const fallback = e.currentTarget
+                          .nextElementSibling as HTMLElement | null;
+                        if (fallback) {
+                          fallback.style.display = "flex";
+                        }
                       }}
                     />
                     {/* Fallback background */}
