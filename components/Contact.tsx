@@ -1,11 +1,19 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Send, Phone, Mail, MapPin, Clock } from "lucide-react";
+type ContactFormData = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  preferredTime: string;
+  agreeToContact: boolean;
+};
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     phone: "",
     email: "",
