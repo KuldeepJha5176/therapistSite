@@ -21,7 +21,7 @@ const Contact = () => {
     preferredTime: "",
     agreeToContact: false,
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
