@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website for a licensed clinical psychologist. Built with **Next.js**, **Tailwind CSS**, and **ShadCN UI**, this project showcases services, office hours, FAQs, and contact options in a clean and accessible layout.
 
-## 🧠 Live Demo
+## 🧠 Live Demo 
 
 > https://therapist-site-black.vercel.app/
 
@@ -19,7 +19,7 @@ A modern, responsive portfolio website for a licensed clinical psychologist. Bui
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack used
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
