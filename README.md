@@ -35,3 +35,5 @@ A modern, responsive portfolio website for a licensed clinical psychologist. Bui
 ```bash
 git clone https://github.com/KuldeepJha5176/therapistSite.git
 
+## give star
+
