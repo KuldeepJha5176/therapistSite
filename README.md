@@ -8,7 +8,7 @@ A modern, responsive portfolio website for a licensed clinical psychologist. Bui
 
 ---
 
-## 📌 Feature
+## 📌 Features
 
 - 🖼️ Elegant and minimal therapist profile layout
 - 💬 Smooth scroll navigation to sections (About, Services, FAQ, Contact)
